@@ -1,5 +1,6 @@
 let url = 'https://pokeapi.co/api/v2/pokedex/';
 
+
 //create a pokemon function
 function Pokemon(name, hp, attack, defense, spattack, spdefense, speed, type, ability){
     this.name = name;
@@ -37,7 +38,7 @@ $(function () { //shorthand for jquery document ready
                 for(let t = 0; t < data.pokemon_entries.length - 1; t++){
                     let poke_name = data.pokemon_entries[t].pokemon_species.name;
                     let poke_no = data.pokemon_entries[t].entry_number;
-                    if(name == poke_name || name == poke_no){
+                    if(name.toLowerCase() == poke_name || name == poke_no){
                         console.log(poke_name);
                         url3 = data.pokemon_entries[t].pokemon_species.url;
                     }
@@ -51,6 +52,7 @@ $(function () { //shorthand for jquery document ready
                     let id = data.pokedex_numbers[0].entry_number;
                     console.log(id);
                     url4 = `https://pokeapi.co/api/v2/pokemon/${id}/`;
+                    localStorage.setItem('url', url4);
 
                     fetch(url4)
                     .then(response => response.json()) 
@@ -90,8 +92,16 @@ $(function () { //shorthand for jquery document ready
                         console.log(type);
                         console.log(ability);
                      
-                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname}</p><p><img src=${data.sprites.front_default} alt="sprite"></p></li>`
-                        $('ul').after(p);
+                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname[0].toUpperCase()}${mname.slice(1)} ‎ </p><p><a href="pages/pokestats.html" target="_blank"><img src=${data.sprites.front_default} alt="sprite" class="pokeimg" value=${id} /></a></p></li>`
+                        $('ul').append(p);
+                        localStorage.setItem('pokemon', JSON.stringify(pokemon));
+
+                        $(".pokeimg").on('click',function (events) {
+                            console.log($(this).attr("value"));
+                            url4 = `https://pokeapi.co/api/v2/pokemon/${$(this).attr("value")}/`;
+                            localStorage.setItem('url', url4);
+
+                        });
                     });
                 });
             });
@@ -102,5 +112,7 @@ $(function () { //shorthand for jquery document ready
     $(".clear").on('click',function (event) {
         event.preventDefault();
         $('.pokebox').remove();
+        document.getElementById('search').value = '';
+        document.querySelector('input[name="inlineRadioOptions"]:checked').checked = false;
     });
 });
