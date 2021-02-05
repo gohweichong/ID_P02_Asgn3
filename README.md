@@ -1,6 +1,6 @@
 # Interactive Development(ID) Assignment 3 - Pokémon Website
 
-I have always wanted to create a game website that helps others provide a certain amount of information to the user. Hence, I decided to create my very own pokémon pokedex. Quite a few have already been made before but I wanted to create a website that can search based on both region and ID no. rather than just the name.
+I(Wei Chong) have created this website before, but only with a purpose of searching for information of pokemon, now we will create a website with additional features such as searching for pokemon and games to create more variety.
 
 With so many pokémon in this day and age, with 151 in the 1st generation and now over 890 with its latest new generation, many can even remember all the pokémon there are now much less the information about each and every pokémon. There are also users who are playing a pokemon game that want to search up information about their team or want to compare stats or other information between other pokemon. With this situation, I decided to create a pokédex that can search for any pokemon based on name, region and ID number. This will help to allow any user to search for the information for the pokémon and learn more about them. 
 
