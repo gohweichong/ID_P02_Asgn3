@@ -4,7 +4,7 @@ I have always wanted to create a game website that helps others provide a certai
 
 With so many pokémon in this day and age, with 151 in the 1st generation and now over 890 with its latest new generation, many can even remember all the pokémon there are now much less the information about each and every pokémon. There are also users who are playing a pokemon game that want to search up information about their team or want to compare stats or other information between other pokemon. With this situation, I decided to create a pokédex that can search for any pokemon based on name, region and ID number. This will help to allow any user to search for the information for the pokémon and learn more about them. 
 
-I(Wei Chong) previously created this website before for assignment 2 so I plan to have this be a upgrade to the previous website, adding new features and games to allow different variety of uses of our website.
+I(Wei Chong) previously created this website before for assignment 2 so I plan to have this be a upgrade to the previous website, adding new features and games to allow different variety of uses of our website. My assignment 2 will be my main reference to create the website.
 
 ## Design 
 Edit later
