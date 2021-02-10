@@ -1,15 +1,63 @@
-.navbar{
-    position: fixed;
-    width:100%;
-    overflow: hidden;
-    background-color: black !important;
-    color: white !important;
-    z-index:100;
-}
 
-nav{
-    margin-bottom: 50px;
-}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 .logo{
     display: block;
@@ -17,7 +65,7 @@ nav{
     margin-right: auto;
     width: 50%;
     margin-bottom: 50px;
-    padding-top: 115px;
+    padding-top: 100px;
 }
 
 .btn-submit{
@@ -29,21 +77,21 @@ nav{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 140px;
-    height: 35px;
-    text-align:center;
+    width: 200px;
+    height: 45px;
 }
 
 .input-group{
     margin-left: auto;
     margin-right: auto;
-    width:30%;
+    width:50%;
     margin-bottom: 20px;
 }
 
 .rounded{
     background: rgba(209, 209, 209, 0.71);
     border-radius: 99px !important;
+    height:45px;
 }
 
 .bg-game{
@@ -55,7 +103,7 @@ nav{
 
 .games-container{
     background-color: rgba(205, 113, 113, 1);
-    padding: 80px;
+    padding: 40px;
 }
 
 .games-containerbox{
@@ -71,11 +119,16 @@ nav{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 140px;
-    height: 35px;
+    width: 200px;
+    height: 45px;
     margin-bottom: 20px;
     border-radius: 99px !important;
     text-align: center;
+}
+
+select { 
+    width: 400px; 
+    text-align-last:center; 
 }
 
 div.btn-submit{
@@ -85,4 +138,18 @@ div.btn-submit{
 .search{
     padding-top: 30px;
     padding-bottom: 40px;
+}
+
+.gameslogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-bottom: 50px;
+    padding-top: 5px;
+}
+
+.game-one{
+    display: flex;
+    flex-direction: row;
 }
